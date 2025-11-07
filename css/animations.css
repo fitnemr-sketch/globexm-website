@@ -1,0 +1,597 @@
+/* ==========================================================================
+   Globe XM - Animations & Effects
+   Smooth scroll reveals, hover effects, transitions
+   ========================================================================== */
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for grid items */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ==========================================================================
+   Scrolling Text Ticker
+   ========================================================================== */
+
+.ticker {
+  background-color: var(--color-navy-primary);
+  padding: var(--spacing-md) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-content {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-xl);
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.ticker-separator {
+  color: var(--color-cyan-accent);
+  font-size: var(--text-2xl);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   Accordion Animation
+   ========================================================================== */
+
+.accordion-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.accordion-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background-color: var(--color-light-blue);
+}
+
+.accordion-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  margin: 0;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-base);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   Loading & Skeleton
+   ========================================================================== */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ==========================================================================
+   Toast Notifications
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  z-index: var(--z-tooltip);
+  animation: slide-in-right 0.3s ease-out;
+  min-width: 300px;
+}
+
+.toast.success {
+  border-left: 4px solid #10b981;
+}
+
+.toast.error {
+  border-left: 4px solid #ef4444;
+}
+
+.toast.hide {
+  animation: slide-out-right 0.3s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   Hover Effects
+   ========================================================================== */
+
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.hover-glow {
+  transition: all var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-cyan);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Pulse Animation (for accents)
+   ========================================================================== */
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ==========================================================================
+   Cyan Glow Effect
+   ========================================================================== */
+
+.cyan-glow {
+  position: relative;
+}
+
+.cyan-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(25, 192, 242, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+
+.cyan-glow:hover::before {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Particle Overlay (for hero sections)
+   ========================================================================== */
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: var(--color-cyan-accent);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 10s infinite ease-in-out;
+}
+
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 1s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 3s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 4.5s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-100px) translateX(20px);
+  }
+  50% {
+    transform: translateY(-200px) translateX(-20px);
+  }
+  75% {
+    transform: translateY(-100px) translateX(20px);
+  }
+}
+
+/* ==========================================================================
+   Copy-to-Clipboard Effect
+   ========================================================================== */
+
+.copy-btn {
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.copy-btn:hover {
+  color: var(--color-cyan-accent);
+}
+
+.copy-btn.copied::after {
+  content: 'Copied!';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+  padding: 4px 12px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  animation: fade-in-out 2s ease-out;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* ==========================================================================
+   Smooth Page Transitions
+   ========================================================================== */
+
+.page-transition {
+  animation: page-fade-in 0.5s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Hero Curve Animation
+   ========================================================================== */
+
+.hero-curve {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.hero-curve svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-curve path {
+  animation: draw-curve 2s ease-out forwards;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+}
+
+@keyframes draw-curve {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ==========================================================================
+   Number Counter Animation
+   ========================================================================== */
+
+.stat-number {
+  display: inline-block;
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-cyan-accent);
+}
+
+/* ==========================================================================
+   World Map Card Flip Animation
+   ========================================================================== */
+
+/* Lock flip state on click */
+.world-region-card.flipped-lock .region-card-front {
+  transform: rotateY(-180deg) !important;
+}
+
+.world-region-card.flipped-lock .region-card-back {
+  transform: rotateY(0deg) !important;
+}
+
+/* Smooth transition for region number */
+.region-number {
+  animation: number-pulse 3s ease-in-out infinite;
+}
+
+@keyframes number-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Card entrance animation */
+.world-region-card {
+  animation: card-entrance 0.6s ease-out backwards;
+}
+
+.world-region-card.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.world-region-card.stagger-2 {
+  animation-delay: 0.25s;
+}
+
+.world-region-card.stagger-3 {
+  animation-delay: 0.4s;
+}
+
+.world-region-card.stagger-4 {
+  animation-delay: 0.55s;
+}
+
+@keyframes card-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced glow effect on hover */
+.world-region-card:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 0 60px rgba(25, 192, 242, 0.6);
+  pointer-events: none;
+  z-index: -1;
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Mobile Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .toast {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    left: var(--spacing-md);
+    min-width: auto;
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-out-right {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+  
+  /* Disable 3D flip on mobile for better performance */
+  .world-region-card {
+    perspective: none;
+  }
+  
+  .world-region-card:active .region-card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  .world-region-card:active .region-card-back {
+    transform: rotateY(0deg);
+  }
+}

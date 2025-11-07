@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Us — Globe XM | Get In Touch</title>
+    <meta name="description" content="Connect with Globe XM. We are here to support and help you grow. Reach out for inquiries about our platform, services, or partnerships.">
+    <meta name="keywords" content="contact, support, inquiries, partnerships, globe xm contact, customer service">
+    <meta name="author" content="Globe XM">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.globexm.com/contact">
+    <meta property="og:title" content="Contact Us — Globe XM | Get In Touch">
+    <meta property="og:description" content="Connect with Globe XM. We are here to support and help you grow. Reach out for inquiries about our platform, services, or partnerships.">
+    <meta property="og:image" content="https://www.globexm.com/assets/images/og-image-contact.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.globexm.com/contact">
+    <meta property="twitter:title" content="Contact Us — Globe XM | Get In Touch">
+    <meta property="twitter:description" content="Connect with Globe XM. We are here to support and help you grow. Reach out for inquiries about our platform, services, or partnerships.">
+    <meta property="twitter:image" content="https://www.globexm.com/assets/images/og-image-contact.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        /* Contact Page Responsive Styles */
+        .contact-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--spacing-3xl);
+            align-items: start;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg);
+            background: rgba(25, 192, 242, 0.08);
+            border: 1px solid rgba(25, 192, 242, 0.2);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-info-item:hover {
+            background: rgba(25, 192, 242, 0.12);
+            border-color: rgba(25, 192, 242, 0.4);
+            transform: translateX(8px);
+        }
+        
+        .contact-icon-box {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-cyan-accent), var(--color-cyan-medium));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .contact-two-column {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-2xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .contact-info-item:hover {
+                transform: translateY(-4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo">
+                    <img src="assets/images/GLOBEXM-LOGO.png" alt="Globe XM Logo">
+                </a>
+                
+                <div class="navbar-menu" id="navbarMenu">
+                    <a href="index.html" class="navbar-link">Home</a>
+                    <a href="about.html" class="navbar-link">About</a>
+                    <a href="services.html" class="navbar-link">Services</a>
+                    <a href="partners.html" class="navbar-link">Partners</a>
+                    <a href="contact.html" class="navbar-link active">Contact</a>
+                </div>
+                
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop" alt="Contact Background">
+        </div>
+        <div class="hero-overlay" style="background: linear-gradient(to right, rgba(6, 24, 41, 0.7) 0%, rgba(6, 24, 41, 0.4) 40%, transparent 70%);"></div>
+        
+        <!-- Particle Effects -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="hero-content fade-in" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 var(--spacing-xl); box-sizing: border-box;">
+            <h1 class="hero-title" style="color: var(--color-white);">
+                Get in <span style="color: var(--color-white);">Touch</span>
+            </h1>
+            <p class="hero-subtitle" style="color: var(--color-white); margin: 0 auto;">
+                We are here to connect, support, and help you grow. Reach out to our team for any inquiries about our platform, services, or partnerships.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section - Quick Contacts & Form Side by Side -->
+    <section class="section" style="padding: var(--spacing-4xl) 0;">
+        <div class="container">
+            <div class="services-header fade-in" style="text-align: center; margin-bottom: var(--spacing-3xl);">
+                <h2 class="services-main-title">Let's Connect</h2>
+                <div class="services-divider"></div>
+                <p class="services-subtitle">
+                    Choose the best way to reach us or send us a message directly
+                </p>
+            </div>
+            
+            <!-- Two Column Layout -->
+            <div class="contact-two-column">
+                
+                <!-- LEFT SIDE: Quick Contacts -->
+                <div class="fade-in">
+                    <h3 style="color: var(--color-white); font-size: var(--text-3xl); margin-bottom: var(--spacing-xl); font-weight: var(--font-weight-bold);">Quick Contacts</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--spacing-2xl); line-height: 1.6;">
+                        Reach out through any of our channels. We're here to help you succeed.
+                    </p>
+                    
+                    <!-- Contact Info Items -->
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                        <!-- Email -->
+                        <a href="mailto:info@globexm.com" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-lg); background: rgba(25, 192, 242, 0.08); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-lg); transition: all 0.3s ease; text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-cyan-accent), var(--color-cyan-medium)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 7l-10 7L2 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); margin-bottom: 4px;">Email</div>
+                                <div style="color: var(--color-white); font-weight: var(--font-weight-semibold);">info@globexm.com</div>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:+971558833542" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-lg); background: rgba(25, 192, 242, 0.08); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-lg); transition: all 0.3s ease; text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-cyan-accent), var(--color-cyan-medium)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); margin-bottom: 4px;">Phone</div>
+                                <div style="color: var(--color-white); font-weight: var(--font-weight-semibold);">+971 55 883 3542</div>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/971558833542" target="_blank" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-lg); background: rgba(25, 192, 242, 0.08); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-lg); transition: all 0.3s ease; text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); margin-bottom: 4px;">WhatsApp</div>
+                                <div style="color: var(--color-white); font-weight: var(--font-weight-semibold);">+971 55 883 3542</div>
+                            </div>
+                        </a>
+
+                        <!-- Address -->
+                        <div style="display: flex; align-items: flex-start; gap: var(--spacing-md); padding: var(--spacing-lg); background: rgba(25, 192, 242, 0.08); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-lg);">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-cyan-accent), var(--color-cyan-medium)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); margin-bottom: 4px;">Address</div>
+                                <div style="color: var(--color-white); font-weight: var(--font-weight-semibold); line-height: 1.6;">
+                                    Office 159, 4th Floor, Building A1<br>
+                                    Dubai South, Dubai, UAE<br>
+                                    P.O. Box 713870
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div style="margin-top: var(--spacing-2xl); padding-top: var(--spacing-2xl); border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); margin-bottom: var(--spacing-md); font-weight: var(--font-weight-semibold);">Follow Us</div>
+                        <div style="display: flex; gap: var(--spacing-md);">
+                            <a href="#" style="width: 40px; height: 40px; background: rgba(25, 192, 242, 0.1); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: var(--color-cyan-accent); text-decoration: none;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                </svg>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; background: rgba(25, 192, 242, 0.1); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: var(--color-cyan-accent); text-decoration: none;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M22.46 6c-.85.38-1.76.63-2.72.75 .98-.59 1.73-1.52 2.09-2.63-.92.54-1.94.93-3.02 1.14C17.96 4.4 16.87 4 15.69 4c-2.63 0-4.76 2.13-4.76 4.76 0 .37.04.74.12 1.09-3.96-.2-7.47-2.09-9.82-4.97-.41.71-.65 1.53-.65 2.4 0 1.65.84 3.11 2.12 3.96-.78-.02-1.52-.24-2.16-.59v.06c0 2.31 1.64 4.23 3.82 4.67-.4.11-.82.17-1.26.17-.31 0-.61-.03-.9-.08 .61 1.91 2.39 3.3 4.49 3.34-1.64 1.29-3.71 2.05-5.96 2.05-.39 0-.77-.02-1.15-.07 2.13 1.37 4.66 2.17 7.38 2.17 8.85 0 13.69-7.34 13.69-13.69l-.02-.62c.94-.68 1.76-1.53 2.41-2.5z"/>
+                                </svg>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; background: rgba(25, 192, 242, 0.1); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: var(--color-cyan-accent); text-decoration: none;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: Contact Form -->
+
+                <div class="fade-in" style="background: linear-gradient(135deg, rgba(25, 192, 242, 0.05), rgba(25, 192, 242, 0.02)); border: 1px solid rgba(25, 192, 242, 0.2); border-radius: var(--radius-2xl); padding: var(--spacing-2xl); backdrop-filter: blur(10px);">
+                    <h3 style="color: var(--color-white); font-size: var(--text-3xl); margin-bottom: var(--spacing-md); font-weight: var(--font-weight-bold);">Send Us a Message</h3>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: var(--spacing-2xl);">
+                        Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                    
+                    <form class="contact-form" id="contactForm" style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+971 55 883 3542">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company Name</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="services">Services Information</option>
+                                <option value="support">Technical Support</option>
+                                <option value="dealer">Dealer Onboarding</option>
+                                <option value="supplier">Supplier Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us how we can help you..." rows="5"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--spacing-lg); font-size: var(--text-base); font-weight: var(--font-weight-semibold); display: flex; align-items: center; justify-content: center; gap: var(--spacing-sm);">
+                            Send Message
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="padding: 0;">
+        <div class="contact-map-container fade-in">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3623456789!2d55.166667!3d25.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiTiA1NcKwMTAnMDAuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="contact-map-overlay">
+                <div class="contact-map-info">
+                    <h3>Visit Our Office</h3>
+                    <p>Office 159, 4th Floor, Building A1<br>Dubai South, Dubai, UAE</p>
+                    <a href="https://maps.google.com/?q=Dubai+South+Dubai+UAE" target="_blank" class="btn btn-outline btn-small">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div>
+                    <div class="navbar-logo" style="margin-bottom: var(--spacing-md);">
+                        <span>⚡</span>
+                        <span>GLOBE XM</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-md);">
+                        Removing borders from cross-border trading.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.46 6c-.85.38-1.76.63-2.72.75 .98-.59 1.73-1.52 2.09-2.63-.92.54-1.94.93-3.02 1.14C17.96 4.4 16.87 4 15.69 4c-2.63 0-4.76 2.13-4.76 4.76 0 .37.04.74.12 1.09-3.96-.2-7.47-2.09-9.82-4.97-.41.71-.65 1.53-.65 2.4 0 1.65.84 3.11 2.12 3.96-.78-.02-1.52-.24-2.16-.59v.06c0 2.31 1.64 4.23 3.82 4.67-.4.11-.82.17-1.26.17-.31 0-.61-.03-.9-.08 .61 1.91 2.39 3.3 4.49 3.34-1.64 1.29-3.71 2.05-5.96 2.05-.39 0-.77-.02-1.15-.07 2.13 1.37 4.66 2.17 7.38 2.17 8.85 0 13.69-7.34 13.69-13.69l-.02-.62c.94-.68 1.76-1.53 2.41-2.5z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/971558833542" class="footer-social-link" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="footer-section-title">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="partners.html" class="footer-link">Partners</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h5 class="footer-section-title">Services</h5>
+                    <a href="services.html#trading" class="footer-link">Trading Marketplace</a>
+                    <a href="services.html#auction" class="footer-link">Auction Access</a>
+                    <a href="services.html#logistics" class="footer-link">Logistics & Customs</a>
+                    <a href="services.html#compliance" class="footer-link">Compliance & Risk</a>
+                    <a href="services.html#escrow" class="footer-link">Escrow & Payments</a>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="footer-section-title">Contact Us</h5>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-sm); font-size: var(--text-sm);">
+                        Office 159, 4th Floor, Building A1<br>
+                        Dubai South, Dubai, UAE<br>
+                        P.O. Box 713870
+                    </p>
+                    <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">
+                        <strong>Email:</strong> info@globexm.com<br>
+                        <strong>Phone:</strong> +971 55 883 3542
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Globe XM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Globe XM",
+        "url": "https://www.globexm.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "info@globexm.com",
+          "telephone": "+971558833542",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Office 159, 4th Floor, Building A1, Dubai South",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE",
+          "postalCode": "713870"
+        }
+      }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <!-- Contact Form Handler -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your backend
+            console.log('Form submitted:', data);
+            
+            // Show success message (you can customize this)
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

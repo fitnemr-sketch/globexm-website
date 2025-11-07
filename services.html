@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Services — Globe XM | Integrated Cross-Border Trading Solutions</title>
+    <meta name="description" content="Globe XM offers a fully integrated suite of services that powers cross-border automotive and spare parts trading with speed, compliance, and confidence.">
+    <meta name="keywords" content="vehicle trading, auction access, logistics, customs, compliance, escrow, dealer financing, market intelligence">
+    <meta name="author" content="Globe XM">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.globexm.com/services">
+    <meta property="og:title" content="Services — Globe XM | Integrated Cross-Border Trading Solutions">
+    <meta property="og:description" content="Globe XM offers a fully integrated suite of services that powers cross-border automotive and spare parts trading with speed, compliance, and confidence.">
+    <meta property="og:image" content="https://www.globexm.com/assets/images/og-image-services.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.globexm.com/services">
+    <meta property="twitter:title" content="Services — Globe XM | Integrated Cross-Border Trading Solutions">
+    <meta property="twitter:description" content="Globe XM offers a fully integrated suite of services that powers cross-border automotive and spare parts trading with speed, compliance, and confidence.">
+    <meta property="twitter:image" content="https://www.globexm.com/assets/images/og-image-services.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        /* Alternating Service Layout */
+        /* Services Container with Dotted Line */
+        #servicesContainer {
+            position: relative;
+        }
+        
+        /* Continuous Dotted Line Background */
+        #servicesContainer::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-image: linear-gradient(to bottom, rgba(25, 192, 242, 0.6) 40%, transparent 40%);
+            background-size: 2px 12px;
+            background-repeat: repeat-y;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .service-alternating {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            gap: 0;
+            align-items: stretch;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-alternating.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Default layout: Content Left, Line Center, Image Right */
+        .service-alternating .service-alternating-content {
+            order: 1;
+            padding-right: var(--spacing-3xl);
+        }
+        
+        .service-alternating .dotted-line-wrapper {
+            order: 2;
+        }
+        
+        .service-alternating .service-alternating-image {
+            order: 3;
+            padding-left: var(--spacing-3xl);
+        }
+        
+        /* Reverse layout: Image Left, Line Center, Content Right */
+        .service-alternating-reverse {
+            grid-template-columns: 1fr 100px 1fr;
+        }
+        
+        .service-alternating-reverse .service-alternating-content {
+            order: 3;
+            padding-left: var(--spacing-3xl);
+            padding-right: 0;
+        }
+        
+        .service-alternating-reverse .service-alternating-image {
+            order: 1;
+            padding-right: var(--spacing-3xl);
+            padding-left: 0;
+        }
+        
+        .service-alternating-reverse .dotted-line-wrapper {
+            order: 2;
+        }
+        
+        /* Dotted Line Wrapper */
+        .dotted-line-wrapper {
+            position: relative;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+        
+        .dotted-line {
+            display: none;
+        }
+        
+        /* Truck Animation Container */
+        #scrollTruck {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 50%;
+            transform: translateX(-50%) rotate(180deg);
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        top 0.1s linear, 
+                        opacity 0.3s ease-out;
+        }
+        
+        #scrollTruck img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 8px rgba(25, 192, 242, 0.4));
+        }
+        
+        @media (max-width: 1024px) {
+            .service-alternating,
+            .service-alternating-reverse {
+                grid-template-columns: 1fr !important;
+                gap: var(--spacing-xl) !important;
+            }
+            
+            .dotted-line-wrapper {
+                display: none !important;
+            }
+            
+            #scrollTruck {
+                display: none !important;
+            }
+            
+            #servicesContainer::before {
+                display: none !important;
+            }
+        }
+        
+        .service-alternating-content {
+            position: relative;
+            padding: var(--spacing-2xl) 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .service-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 8rem;
+            font-weight: var(--font-weight-black);
+            color: rgba(25, 192, 242, 0.08);
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .service-alternating-title {
+            position: relative;
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-black);
+            color: var(--color-white);
+            margin-bottom: var(--spacing-lg);
+            letter-spacing: -0.02em;
+            z-index: 1;
+        }
+        
+        .service-alternating-text {
+            position: relative;
+            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            z-index: 1;
+        }
+        
+        .service-alternating-image {
+            position: relative;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            align-self: stretch;
+            padding: 0;
+        }
+        
+        .service-alternating-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-alternating:hover .service-alternating-image img {
+            transform: scale(1.08);
+        }
+        
+        .service-alternating-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(25, 192, 242, 0.2), rgba(6, 24, 41, 0.6));
+            opacity: 0.7;
+            transition: opacity 0.5s ease;
+        }
+        
+        .service-alternating:hover .service-alternating-overlay {
+            opacity: 0.3;
+        }
+        
+        /* Impact Cards Hover Effects (matching Our Values) */
+        .grid-3 > div {
+            cursor: pointer;
+        }
+        
+        .grid-3 > div:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(25, 192, 242, 0.4) !important;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(25, 192, 242, 0.3) !important;
+        }
+        
+        .grid-3 > div:hover > div:first-of-type {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, var(--color-cyan-accent), var(--color-blue-primary)) !important;
+            box-shadow: 0 0 30px rgba(25, 192, 242, 0.6) !important;
+        }
+        
+        .grid-3 > div:hover > div:first-of-type svg {
+            color: var(--color-white) !important;
+        }
+        
+        .grid-3 > div:hover h4 {
+            color: var(--color-cyan-accent) !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .service-alternating,
+            .service-alternating-reverse {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .service-alternating-reverse .service-alternating-content,
+            .service-alternating-reverse .service-alternating-image {
+                order: unset;
+            }
+            
+            .service-alternating-image {
+                height: 350px;
+            }
+            
+            .service-number {
+                font-size: 6rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-3 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .service-alternating-content {
+                padding: var(--spacing-lg);
+            }
+            
+            .service-alternating-title {
+                font-size: var(--text-3xl);
+            }
+            
+            .service-alternating-text {
+                font-size: var(--text-lg);
+            }
+            
+            .service-alternating-image {
+                height: 280px;
+            }
+            
+            .service-number {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo">
+                    <img src="assets/images/GLOBEXM-LOGO.png" alt="Globe XM Logo">
+                </a>
+                
+                <div class="navbar-menu" id="navbarMenu">
+                    <a href="index.html" class="navbar-link">Home</a>
+                    <a href="about.html" class="navbar-link">About</a>
+                    <a href="services.html" class="navbar-link active">Services</a>
+                    <a href="partners.html" class="navbar-link">Partners</a>
+                    <a href="contact.html" class="navbar-link">Contact</a>
+                </div>
+                
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="assets/videos/services-hero-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay" style="background: linear-gradient(to right, rgba(6, 24, 41, 0.7) 0%, rgba(6, 24, 41, 0.4) 40%, transparent 70%);"></div>
+        
+        <!-- Particle Effects -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="hero-content fade-in" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 var(--spacing-xl); box-sizing: border-box;">
+            <h1 class="hero-title" style="color: var(--color-white);">
+                What We <span style="color: var(--color-white);">Offer</span>
+            </h1>
+            <p class="hero-subtitle" style="color: var(--color-white); max-width: 850px; margin: 0 auto;">
+                Globe XM offers a fully integrated suite of services that powers cross-border automotive and spare parts trading. Our company removes friction, adds transparency, and helps dealers, suppliers, and partners operate with speed, compliance, and confidence across global markets.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="section" style="padding: var(--spacing-4xl) 0;">
+        <div class="container">
+            <div class="services-header fade-in" style="text-align: center; margin-bottom: var(--spacing-4xl);">
+                <h2 class="services-main-title">Core Services</h2>
+                <div class="services-divider"></div>
+                <p class="services-subtitle">
+                    Comprehensive solutions designed for speed, trust, and scalability
+                </p>
+            </div>
+
+            <!-- Alternating Services Layout -->
+            <div id="servicesContainer" style="display: flex; flex-direction: column; gap: var(--spacing-3xl); position: relative;">
+                
+                <!-- Animated Truck -->
+                <div id="scrollTruck" style="display: none;">
+                    <img src="assets/icons/LKW.svg" alt="Truck">
+                </div>
+                
+                <!-- Service 1: Vehicle & Parts Trading (Image Right) -->
+                <div class="service-alternating fade-in" data-scroll-reveal="left">
+                    <div class="service-alternating-content">
+                        <div class="service-number">01</div>
+                        <h3 class="service-alternating-title">Vehicle & Parts Trading</h3>
+                        <p class="service-alternating-text">Access a wide inventory of vehicles and spare parts sourced from trusted global suppliers and auctions. Buyers can place orders, view inspection reports, and manage orders through one channel.</p>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&h=800&fit=crop" alt="Vehicle & Parts Trading">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Auction Access & Bidding Engine (Image Left) -->
+                <div class="service-alternating service-alternating-reverse fade-in" data-scroll-reveal="right">
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=800&fit=crop" alt="Auction Access & Bidding Engine">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-content">
+                        <div class="service-number">02</div>
+                        <h3 class="service-alternating-title">Auction Access & Bidding Engine</h3>
+                        <p class="service-alternating-text">Participate in live vehicle auctions across regions. Our system provides real-time bidding, multi-market listings, and predictive pricing insights to maximize deal value.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Logistics & Customs Management (Image Right) -->
+                <div class="service-alternating fade-in" data-scroll-reveal="left">
+                    <div class="service-alternating-content">
+                        <div class="service-number">03</div>
+                        <h3 class="service-alternating-title">Logistics & Customs Management</h3>
+                        <p class="service-alternating-text">We manage end-to-end cross-border logistics, from vehicle pickup to delivery including customs clearance, shipping, inspection coordination, and real-time tracking.</p>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=1200&h=800&fit=crop" alt="Logistics & Customs Management">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                </div>
+                
+                <!-- Service 4: Compliance & Risk Management (Image Left) -->
+                <div class="service-alternating service-alternating-reverse fade-in" data-scroll-reveal="right">
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=800&fit=crop" alt="Compliance & Risk Management">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-content">
+                        <div class="service-number">04</div>
+                        <h3 class="service-alternating-title">Compliance & Risk Management</h3>
+                        <p class="service-alternating-text">Our operations are fully compliance-led. We handle AML/KYC verification, trade documentation, ESG monitoring, and ensure that every transaction adheres to regulatory standards.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5: Strategic Local Partner (SLP) Model (Image Right) -->
+                <div class="service-alternating fade-in" data-scroll-reveal="left">
+                    <div class="service-alternating-content">
+                        <div class="service-number">05</div>
+                        <h3 class="service-alternating-title">Strategic Local Partner (SLP) Model</h3>
+                        <p class="service-alternating-text">We operate locally through vetted Strategic Local Partners who manage onboarding, dealer relationships, compliance, logistics, and support, ensuring cultural alignment and trust.</p>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=800&fit=crop" alt="Strategic Local Partner Model">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                </div>
+                
+                <!-- Service 6: Escrow & Secure Payment Solutions (Image Left) -->
+                <div class="service-alternating service-alternating-reverse fade-in" data-scroll-reveal="right">
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=800&fit=crop" alt="Escrow & Secure Payment Solutions">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-content">
+                        <div class="service-number">06</div>
+                        <h3 class="service-alternating-title">Escrow & Secure Payment Solutions</h3>
+                        <p class="service-alternating-text">All transactions are safeguarded through Globe XM's escrow engine, protecting both buyers and sellers by ensuring milestone-based fund release.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 7: Dealer Financing Enablement (Image Right) -->
+                <div class="service-alternating fade-in" data-scroll-reveal="left">
+                    <div class="service-alternating-content">
+                        <div class="service-number">07</div>
+                        <h3 class="service-alternating-title">Dealer Financing Enablement</h3>
+                        <p class="service-alternating-text">Dealers can access credit through Globe XM's financing framework, including partnerships with financial providers and internal credit line options to scale purchasing capacity.</p>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=800&fit=crop" alt="Dealer Financing Enablement">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                </div>
+                
+                <!-- Service 8: Data & Market Intelligence (Image Left) -->
+                <div class="service-alternating service-alternating-reverse fade-in" data-scroll-reveal="right">
+                    <div class="service-alternating-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop" alt="Data & Market Intelligence">
+                        <div class="service-alternating-overlay"></div>
+                    </div>
+                    <div class="dotted-line-wrapper">
+                        <div class="dotted-line"></div>
+                    </div>
+                    <div class="service-alternating-content">
+                        <div class="service-number">08</div>
+                        <h3 class="service-alternating-title">Data & Market Intelligence</h3>
+                        <p class="service-alternating-text">Our platform provides advanced analytics and insights, pricing trends, inventory demand, dealer performance to help dealers make smarter, faster decisions.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(6, 24, 41, 0.98), rgba(11, 42, 74, 0.95)); padding: var(--spacing-4xl) 0;">
+        <div class="container">
+            <div class="fade-in" style="text-align: center; margin-bottom: var(--spacing-3xl);">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: var(--font-weight-black); color: var(--color-white); margin-bottom: var(--spacing-lg); letter-spacing: -0.03em; line-height: 1.1;">
+                    Why It <span style="background: linear-gradient(135deg, var(--color-cyan-accent), #00d9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Matters</span>
+                </h2>
+                <p style="font-size: var(--text-xl); color: rgba(255, 255, 255, 0.75); max-width: 750px; margin: 0 auto; line-height: 1.8;">
+                    Our services are designed for speed, trust, and scalability across global markets
+                </p>
+            </div>
+            
+            <div class="grid grid-3" style="gap: var(--spacing-xl);">
+                <!-- Impact Card 1 - Speed -->
+                <div class="fade-in stagger-1" style="background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: var(--spacing-2xl) var(--spacing-xl); text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--spacing-lg); background: linear-gradient(135deg, rgba(25, 192, 242, 0.2), rgba(14, 58, 138, 0.2)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(25, 192, 242, 0.3);">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-cyan-accent);">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: var(--text-2xl); font-weight: var(--font-weight-black); color: var(--color-white); margin-bottom: var(--spacing-sm); letter-spacing: -0.01em;">Speed</h4>
+                    <p style="font-size: var(--text-base); color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin: 0;">Real-time processing and instant transaction capabilities across borders</p>
+                </div>
+                
+                <!-- Impact Card 2 - Trust -->
+                <div class="fade-in stagger-2" style="background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: var(--spacing-2xl) var(--spacing-xl); text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--spacing-lg); background: linear-gradient(135deg, rgba(25, 192, 242, 0.2), rgba(14, 58, 138, 0.2)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(25, 192, 242, 0.3);">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-cyan-accent);">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: var(--text-2xl); font-weight: var(--font-weight-black); color: var(--color-white); margin-bottom: var(--spacing-sm); letter-spacing: -0.01em;">Trust</h4>
+                    <p style="font-size: var(--text-base); color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin: 0;">100% compliance-led operations with escrow protection and verified partners</p>
+                </div>
+                
+                <!-- Impact Card 3 - Scale -->
+                <div class="fade-in stagger-3" style="background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: var(--spacing-2xl) var(--spacing-xl); text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);">
+                    <div style="width: 70px; height: 70px; margin: 0 auto var(--spacing-lg); background: linear-gradient(135deg, rgba(25, 192, 242, 0.2), rgba(14, 58, 138, 0.2)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(25, 192, 242, 0.3);">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-cyan-accent);">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: var(--text-2xl); font-weight: var(--font-weight-black); color: var(--color-white); margin-bottom: var(--spacing-sm); letter-spacing: -0.01em;">Scale</h4>
+                    <p style="font-size: var(--text-base); color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin: 0;">Global infrastructure supporting dealers from small to enterprise-level operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div>
+                    <div class="navbar-logo" style="margin-bottom: var(--spacing-md);">
+                        <span>⚡</span>
+                        <span>GLOBE XM</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-md);">
+                        Removing borders from cross-border trading.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.46 6c-.85.38-1.76.63-2.72.75 .98-.59 1.73-1.52 2.09-2.63-.92.54-1.94.93-3.02 1.14C17.96 4.4 16.87 4 15.69 4c-2.63 0-4.76 2.13-4.76 4.76 0 .37.04.74.12 1.09-3.96-.2-7.47-2.09-9.82-4.97-.41.71-.65 1.53-.65 2.4 0 1.65.84 3.11 2.12 3.96-.78-.02-1.52-.24-2.16-.59v.06c0 2.31 1.64 4.23 3.82 4.67-.4.11-.82.17-1.26.17-.31 0-.61-.03-.9-.08 .61 1.91 2.39 3.3 4.49 3.34-1.64 1.29-3.71 2.05-5.96 2.05-.39 0-.77-.02-1.15-.07 2.13 1.37 4.66 2.17 7.38 2.17 8.85 0 13.69-7.34 13.69-13.69l-.02-.62c.94-.68 1.76-1.53 2.41-2.5z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/971558833542" class="footer-social-link" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="footer-section-title">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="partners.html" class="footer-link">Partners</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h5 class="footer-section-title">Services</h5>
+                    <a href="#" class="footer-link">Vehicle & Parts Trading</a>
+                    <a href="#" class="footer-link">Auction Access & Bidding</a>
+                    <a href="#" class="footer-link">Logistics & Customs</a>
+                    <a href="#" class="footer-link">Compliance & Risk</a>
+                    <a href="#" class="footer-link">Escrow & Payments</a>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="footer-section-title">Contact Us</h5>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-sm); font-size: var(--text-sm);">
+                        Office 159, 4th Floor, Building A1<br>
+                        Dubai South, Dubai, UAE<br>
+                        P.O. Box 713870
+                    </p>
+                    <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">
+                        <strong>Email:</strong> info@globexm.com<br>
+                        <strong>Phone:</strong> +971 55 883 3542
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Globe XM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Cross-Border Automotive Trading",
+      "provider": {
+        "@type": "Organization",
+        "name": "Globe XM",
+        "url": "https://www.globexm.com"
+      },
+      "areaServed": "Worldwide",
+      "description": "Fully integrated suite of services that powers cross-border automotive and spare parts trading with speed, compliance, and confidence."
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <!-- Scroll Reveal Animation for Services -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all service alternating cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceCards = document.querySelectorAll('.service-alternating');
+            serviceCards.forEach(card => {
+                observer.observe(card);
+            });
+            
+            // Animated Truck Scroll Effect
+            const truck = document.getElementById('scrollTruck');
+            const servicesContainer = document.getElementById('servicesContainer');
+            
+            if (truck && servicesContainer && window.innerWidth > 1024) {
+                truck.style.display = 'block';
+                
+                // Set truck to 50% (center of container)
+                truck.style.left = '50%';
+                
+                let lastScrollY = window.scrollY;
+                let isScrollingUp = false;
+                
+                function updateTruckPosition() {
+                    const containerRect = servicesContainer.getBoundingClientRect();
+                    const containerTop = containerRect.top + window.scrollY;
+                    const containerBottom = containerTop + containerRect.height;
+                    const currentScroll = window.scrollY;
+                    
+                    // Check scroll direction
+                    if (currentScroll < lastScrollY) {
+                        if (!isScrollingUp) {
+                            isScrollingUp = true;
+                            // Rotate 360 degrees when changing to scroll up
+                            truck.style.transform = 'translateX(-50%) rotate(0deg)';
+                        }
+                    } else if (currentScroll > lastScrollY) {
+                        if (isScrollingUp) {
+                            isScrollingUp = false;
+                            // Rotate 360 degrees when changing to scroll down
+                            truck.style.transform = 'translateX(-50%) rotate(180deg)';
+                        }
+                    }
+                    lastScrollY = currentScroll;
+                    
+                    // Calculate position within container
+                    const viewportMiddle = window.scrollY + (window.innerHeight / 2);
+                    
+                    if (viewportMiddle >= containerTop && viewportMiddle <= containerBottom) {
+                        const progress = (viewportMiddle - containerTop) / (containerBottom - containerTop);
+                        const truckTop = containerRect.height * progress;
+                        truck.style.top = truckTop + 'px';
+                        truck.style.opacity = '1';
+                    } else {
+                        truck.style.opacity = '0';
+                    }
+                }
+                
+                // Update on scroll
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            updateTruckPosition();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+                
+                // Update on resize
+                window.addEventListener('resize', updateTruckPosition);
+                
+                // Initial position
+                updateTruckPosition();
+            }
+        });
+    </script>
+</body>
+</html>
