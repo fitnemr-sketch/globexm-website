@@ -60,10 +60,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" style="min-height: 70vh; padding-top: 100px;">
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
         <div class="hero-background">
-            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&h=1080&fit=crop" alt="Partners Background">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                <source src="assets/videos/hero-video.webm" type="video/webm">
+            </video>
         </div>
         <div class="hero-overlay"></div>
         
@@ -74,14 +77,18 @@
             <div class="particle"></div>
             <div class="particle"></div>
             <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
         
-        <div class="hero-content fade-in" style="text-align: center;">
-            <h1 class="hero-title">
-                Our <span class="highlight">Partners</span>
+        <div class="hero-content fade-in" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 var(--spacing-xl); box-sizing: border-box;">
+            <h1 class="hero-title" style="color: var(--color-white);">
+                Building a <span style="font-weight: var(--font-weight-black); color: var(--color-white);">Trusted Global</span> Partnership Network
             </h1>
-            <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto var(--spacing-xl);">
-                We work with a trusted group of partners across the globe to deliver seamless, secure, and scalable cross-border automotive and parts trading.
+            <p class="hero-subtitle" style="color: var(--color-white); margin: 0 auto;">
+                Join our ecosystem of Strategic Local Partners, suppliers, and service providers worldwide.
             </p>
         </div>
         
@@ -89,179 +96,362 @@
         <div class="hero-decoration"></div>
     </section>
 
-    <!-- Partners Overview Section -->
-    <section class="section" style="padding-top: var(--spacing-2xl);">
+    <!-- Unified Feature Sections Wrapper -->
+    <div class="continuous-feature-group">
+        <!-- Blurred Glow Background Circles -->
+        <div class="bg-glow bg-glow-cyan" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-blue" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-cyan small slow" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-blue medium alt" aria-hidden="true"></div>
+
+    <!-- Strategic Local Partner (SLP) Model Section -->
+    <section class="section unified-feature-section" style="padding-top: var(--spacing-2xl);">
         <div class="container">
-            <div class="services-header fade-in" style="text-align: center; margin-bottom: var(--spacing-3xl);">
-                <h2 class="services-main-title">Partners Overview</h2>
-                <div class="services-divider"></div>
-                <p class="services-subtitle">
-                    Strategic partnerships enabling seamless global operations
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Strategic Local Partner (SLP) Model</h2>
+                <p class="unified-section-subtitle">
+                    Markets are operated through exclusive SLPs who uphold Globe XM's standards while localizing operations—bringing global backing to local expertise.
                 </p>
             </div>
             
-            <!-- Partner Regions Grid -->
-            <div class="partner-regions-grid">
-                <!-- North America Partners -->
-                <div class="partner-region-card fade-in stagger-1">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+            <!-- SLP Core Responsibilities -->
+            <div class="grid grid-3" style="margin-bottom: var(--spacing-3xl);">
+                <div class="slp-responsibility-card fade-in stagger-1">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">Dealer Onboarding</h3>
                         </div>
-                        <h3 class="partner-region-title">United States</h3>
+                        <p class="slp-card-text">Relationship management and dealer network expansion in your exclusive corridor</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Reliable access to quality inventory</p>
-                    <div class="partner-region-badge">North America</div>
                 </div>
 
-                <div class="partner-region-card fade-in stagger-2">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <div class="slp-responsibility-card fade-in stagger-2">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">KYC/AML Compliance</h3>
                         </div>
-                        <h3 class="partner-region-title">Canada</h3>
+                        <p class="slp-card-text">Verification and compliance processing ensuring regulatory adherence</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Seamless logistics and customs processing</p>
-                    <div class="partner-region-badge">North America</div>
                 </div>
 
-                <div class="partner-region-card fade-in stagger-3">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <div class="slp-responsibility-card fade-in stagger-3">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">Local Financing</h3>
                         </div>
-                        <h3 class="partner-region-title">Europe</h3>
+                        <p class="slp-card-text">Dealer financing solutions in partnership with Globe XM financial infrastructure</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Trusted, compliant transaction flows</p>
-                    <div class="partner-region-badge">Europe</div>
                 </div>
 
-                <!-- Asia Pacific Partners -->
-                <div class="partner-region-card fade-in stagger-4">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <div class="slp-responsibility-card fade-in stagger-4">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">Logistics Coordination</h3>
                         </div>
-                        <h3 class="partner-region-title">South Korea</h3>
+                        <p class="slp-card-text">Last-mile logistics and customs clearance execution</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Localized service execution through SLPs</p>
-                    <div class="partner-region-badge">Asia Pacific</div>
                 </div>
 
-                <div class="partner-region-card fade-in stagger-5">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <div class="slp-responsibility-card fade-in stagger-5">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                    <path d="M8 10h.01"/>
+                                    <path d="M12 10h.01"/>
+                                    <path d="M16 10h.01"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">Customer Support</h3>
                         </div>
-                        <h3 class="partner-region-title">Japan</h3>
+                        <p class="slp-card-text">Local support and issue resolution for dealers and suppliers</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Real-time data and documentation transparency</p>
-                    <div class="partner-region-badge">Asia Pacific</div>
                 </div>
 
-                <div class="partner-region-card fade-in stagger-6">
-                    <div class="partner-region-header">
-                        <div class="partner-region-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <div class="slp-responsibility-card fade-in stagger-6">
+                    <div class="slp-card-bg-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop');"></div>
+                    <div class="slp-card-content">
+                        <div class="slp-card-header">
+                            <div class="slp-card-icon-small">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <h3 class="slp-card-title">Revenue Share Model</h3>
                         </div>
-                        <h3 class="partner-region-title">China</h3>
+                        <p class="slp-card-text">Exclusive corridor rights with transparent revenue sharing structure</p>
                     </div>
-                    <div class="partner-region-divider"></div>
-                    <p class="partner-region-description">Manufacturing excellence and supply chain integration</p>
-                    <div class="partner-region-badge">Asia Pacific</div>
+                </div>
+            </div>
+
+            <!-- SLP Value Proposition -->
+            <div class="fade-in" style="background: rgba(15, 53, 88, 0.4); backdrop-filter: blur(10px); border-radius: var(--radius-2xl); border: 1px solid rgba(25, 192, 242, 0.3); padding: var(--spacing-3xl); text-align: center;">
+                <h3 style="color: var(--color-cyan-accent); font-size: var(--text-3xl); font-weight: var(--font-weight-black); margin-bottom: var(--spacing-md);">
+                    Operate Your Corridor with Global Backing
+                </h3>
+                <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--spacing-xl); max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                    As an SLP, you'll have exclusive rights to your market corridor, backed by Globe XM's technology, compliance infrastructure, and global supplier network. We provide the tools, you provide the local execution excellence.
+                </p>
+                <div class="grid grid-3" style="gap: var(--spacing-xl); margin-top: var(--spacing-2xl);">
+                    <div>
+                        <div style="font-size: var(--text-4xl); color: var(--color-cyan-accent); font-weight: var(--font-weight-black); margin-bottom: var(--spacing-xs); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">✓</div>
+                        <h5 style="color: var(--color-white); font-size: var(--text-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Exclusive Corridor Rights</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">Protected territory with no competing SLPs</p>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-4xl); color: var(--color-cyan-accent); font-weight: var(--font-weight-black); margin-bottom: var(--spacing-xs); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">✓</div>
+                        <h5 style="color: var(--color-white); font-size: var(--text-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Complete Onboarding Kit</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">Technology, training, and marketing assets</p>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-4xl); color: var(--color-cyan-accent); font-weight: var(--font-weight-black); margin-bottom: var(--spacing-xs); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">✓</div>
+                        <h5 style="color: var(--color-white); font-size: var(--text-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Global Infrastructure</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: var(--text-sm);">Access to suppliers, compliance, and financing</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Regional Capabilities Section -->
-    <section class="section" style="background: linear-gradient(135deg, rgba(6, 24, 41, 0.95), rgba(11, 42, 74, 0.85)); position: relative; overflow: hidden;">
-        <!-- Background Pattern -->
-        <div style="position: absolute; inset: 0; opacity: 0.05; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);"></div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div class="services-header fade-in" style="text-align: center; margin-bottom: var(--spacing-3xl);">
-                <h2 class="services-main-title">Regional Capabilities</h2>
-                <div class="services-divider"></div>
-                <p class="services-subtitle">
-                    Specialized expertise across key global markets
+    <!-- Audience Segmentation & Messaging Framework Section -->
+    <section class="section unified-feature-section">
+        <div class="container">
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Partner Ecosystem</h2>
+                <p class="unified-section-subtitle">
+                    Connecting dealers, suppliers, service providers, and local partners into one trusted network
                 </p>
             </div>
             
-            <!-- Capabilities Grid -->
-            <div class="capabilities-grid">
-                <!-- North America -->
-                <div class="capability-card fade-in stagger-1">
-                    <div class="capability-card-header">
-                        <div class="capability-region-badge">01</div>
-                        <h3 class="capability-title">North America</h3>
+            <!-- Partner Types with Messaging -->
+            <div class="grid grid-2" style="gap: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+                <!-- Dealers -->
+                <div class="service-premium-card fade-in stagger-1">
+                    <div class="service-premium-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop" alt="Dealers">
                     </div>
-                    <div class="capability-image">
-                        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&h=800&fit=crop" alt="North America">
-                        <div class="capability-image-overlay"></div>
-                    </div>
-                    <div class="capability-content">
-                        <div class="capability-tags">
-                            <span class="capability-tag">Auctions</span>
-                            <span class="capability-tag">Sourcing</span>
-                            <span class="capability-tag">Logistics</span>
-                        </div>
-                        <p class="capability-description">Strong supply for Middle East and Africa</p>
+                    <div class="service-premium-content">
+                        <h3 class="service-premium-title">Dealers</h3>
+                        <p class="service-premium-text" style="margin-bottom: var(--spacing-md);">
+                            Secure and verified access to global vehicle inventory
+                        </p>
+                        <p class="service-premium-text" style="color: rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: 2; display: flex; flex-direction: column; gap: 8px;">
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Verified sourcing with reliable logistics</span></span>
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Real-time pricing in a transparent marketplace</span></span>
+                        </p>
                     </div>
                 </div>
 
-                <!-- Europe -->
-                <div class="capability-card fade-in stagger-2">
+                <!-- SLPs -->
+                <div class="service-premium-card fade-in stagger-2">
+                    <div class="service-premium-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Strategic Local Partners">
+                    </div>
+                    <div class="service-premium-content">
+                        <h3 class="service-premium-title">Strategic Local Partners (SLPs)</h3>
+                        <p class="service-premium-text" style="margin-bottom: var(--spacing-md);">
+                            Operate your corridor with global backing
+                        </p>
+                        <p class="service-premium-text" style="color: rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: 2; display: flex; flex-direction: column; gap: 8px;">
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Revenue share model with exclusive corridor rights</span></span>
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Complete onboarding kit and operational support</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Suppliers -->
+                <div class="service-premium-card fade-in stagger-3">
+                    <div class="service-premium-image">
+                        <img src="https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=800&h=600&fit=crop" alt="Suppliers">
+                    </div>
+                    <div class="service-premium-content">
+                        <h3 class="service-premium-title">Suppliers & Auction Houses</h3>
+                        <p class="service-premium-text" style="margin-bottom: var(--spacing-md);">
+                            Reach high-growth dealer networks globally
+                        </p>
+                        <p class="service-premium-text" style="color: rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: 2; display: flex; flex-direction: column; gap: 8px;">
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Platform scale with localized sales and compliance</span></span>
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Real-time demand insights and market intelligence</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Channel Partners -->
+                <div class="service-premium-card fade-in stagger-4">
+                    <div class="service-premium-image">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop" alt="Channel Partners">
+                    </div>
+                    <div class="service-premium-content">
+                        <h3 class="service-premium-title">Channel Partners</h3>
+                        <p class="service-premium-text" style="margin-bottom: var(--spacing-md);">
+                            Enable the infrastructure behind global trade
+                        </p>
+                        <p class="service-premium-text" style="color: rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: 2; display: flex; flex-direction: column; gap: 8px;">
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>API integrations with compliance layer</span></span>
+                            <span style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: var(--color-cyan-accent); font-size: 20px; line-height: 1;">•</span><span>Logistics coordination and fintech partnerships</span></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Brand Differentiation Section -->
+    <section class="section unified-feature-section">
+        <div class="container">
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Why Partner with Globe XM</h2>
+                <p class="unified-section-subtitle">
+                    We differentiate through compliance-first infrastructure, local execution, and AI-powered intelligence
+                </p>
+            </div>
+            
+            <div class="grid grid-2" style="gap: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+                <!-- Differentiation Point 1 -->
+                <div class="why-partner-card fade-in stagger-1">
+                    <div class="why-partner-bg" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=800&fit=crop');"></div>
+                    <div class="why-partner-overlay"></div>
+                    <div class="why-partner-content">
+                        <div class="why-partner-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-partner-title">Compliance-First Infrastructure</h3>
+                        <p class="why-partner-text">
+                            Building confidence through robust governance, embedded KYC/AML automation, and adherence to GDPR, NDPR, DIFC regulations
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Differentiation Point 2 -->
+                <div class="why-partner-card fade-in stagger-2">
+                    <div class="why-partner-bg" style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&h=800&fit=crop');"></div>
+                    <div class="why-partner-overlay"></div>
+                    <div class="why-partner-content">
+                        <div class="why-partner-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-partner-title">Local Execution Network</h3>
+                        <p class="why-partner-text">
+                            Strategic Local Partners manage corridor execution, dealer onboarding, and compliance—ensuring local responsiveness with global standards
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Differentiation Point 3 -->
+                <div class="why-partner-card fade-in stagger-3">
+                    <div class="why-partner-bg" style="background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&h=800&fit=crop');"></div>
+                    <div class="why-partner-overlay"></div>
+                    <div class="why-partner-content">
+                        <div class="why-partner-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-partner-title">Integrated Infrastructure</h3>
+                        <p class="why-partner-text">
+                            End-to-end platform spanning logistics, compliance, dealer financing, and escrow—eliminating fragmentation in cross-border trade
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Differentiation Point 4 -->
+                <div class="why-partner-card fade-in stagger-4">
+                    <div class="why-partner-bg" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop');"></div>
+                    <div class="why-partner-overlay"></div>
+                    <div class="why-partner-content">
+                        <div class="why-partner-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"/>
+                                <rect x="14" y="3" width="7" height="7"/>
+                                <rect x="14" y="14" width="7" height="7"/>
+                                <rect x="3" y="14" width="7" height="7"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-partner-title">Predictive AI Insights</h3>
+                        <p class="why-partner-text">
+                            Real-time pricing intelligence, predictive logistics, and transparent inventory access powered by AI and data analytics
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Market Positioning Section -->
+    <section class="section unified-feature-section">
+        <div class="container">
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Global Market Positioning</h2>
+                <p class="unified-section-subtitle">
+                    Engineered to scale across diverse markets with corridor-specific execution
+                </p>
+            </div>
+            
+            <!-- Regional Markets Grid -->
+            <div class="grid grid-3" style="gap: var(--spacing-lg);">
+                <!-- Americas -->
+                <div class="capability-card fade-in stagger-1">
                     <div class="capability-card-header">
-                        <div class="capability-region-badge">02</div>
-                        <h3 class="capability-title">Europe</h3>
+                        <div class="capability-region-badge">01</div>
+                        <h3 class="capability-title">Americas</h3>
                     </div>
                     <div class="capability-image">
-                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&h=800&fit=crop" alt="Europe">
+                        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&h=800&fit=crop" alt="Americas">
                         <div class="capability-image-overlay"></div>
                     </div>
                     <div class="capability-content">
                         <div class="capability-tags">
-                            <span class="capability-tag">OEM Parts</span>
-                            <span class="capability-tag">Compliance</span>
+                            <span class="capability-tag">Auction Networks</span>
+                            <span class="capability-tag">High-Demand Markets</span>
                         </div>
-                        <p class="capability-description">Efficient corridors to Africa</p>
+                        <p class="capability-description">Strong supply for Middle East and Africa corridors with established auction infrastructure</p>
                     </div>
                 </div>
 
                 <!-- Middle East -->
-                <div class="capability-card fade-in stagger-3">
+                <div class="capability-card fade-in stagger-2">
                     <div class="capability-card-header">
-                        <div class="capability-region-badge">03</div>
+                        <div class="capability-region-badge">02</div>
                         <h3 class="capability-title">Middle East</h3>
                     </div>
                     <div class="capability-image">
@@ -270,36 +460,17 @@
                     </div>
                     <div class="capability-content">
                         <div class="capability-tags">
-                            <span class="capability-tag">Hub Logistics</span>
-                            <span class="capability-tag">SLP Network</span>
+                            <span class="capability-tag">Trade-Friendly Hubs</span>
+                            <span class="capability-tag">Strategic Gateway</span>
                         </div>
-                        <p class="capability-description">Gateway to APAC and Africa</p>
-                    </div>
-                </div>
-
-                <!-- Asia Pacific -->
-                <div class="capability-card fade-in stagger-4">
-                    <div class="capability-card-header">
-                        <div class="capability-region-badge">04</div>
-                        <h3 class="capability-title">Asia Pacific</h3>
-                    </div>
-                    <div class="capability-image">
-                        <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&h=800&fit=crop" alt="Asia Pacific">
-                        <div class="capability-image-overlay"></div>
-                    </div>
-                    <div class="capability-content">
-                        <div class="capability-tags">
-                            <span class="capability-tag">Manufacturing</span>
-                            <span class="capability-tag">Air Freight</span>
-                        </div>
-                        <p class="capability-description">Fast turn projects</p>
+                        <p class="capability-description">UAE serves as origin hub with regulatory alignment—gateway to APAC and Africa</p>
                     </div>
                 </div>
 
                 <!-- Africa -->
-                <div class="capability-card fade-in stagger-5">
+                <div class="capability-card fade-in stagger-3">
                     <div class="capability-card-header">
-                        <div class="capability-region-badge">05</div>
+                        <div class="capability-region-badge">03</div>
                         <h3 class="capability-title">Africa</h3>
                     </div>
                     <div class="capability-image">
@@ -308,141 +479,54 @@
                     </div>
                     <div class="capability-content">
                         <div class="capability-tags">
-                            <span class="capability-tag">Dealer Demand</span>
-                            <span class="capability-tag">Last Mile</span>
+                            <span class="capability-tag">Rapidly Growing</span>
+                            <span class="capability-tag">Dealer Base Expansion</span>
                         </div>
-                        <p class="capability-description">Growth focus market</p>
+                        <p class="capability-description">High-growth market focus with corridor expansion and local SLP activation</p>
+                    </div>
+                </div>
+
+                <!-- Asia-Pacific -->
+                <div class="capability-card fade-in stagger-4">
+                    <div class="capability-card-header">
+                        <div class="capability-region-badge">04</div>
+                        <h3 class="capability-title">Asia-Pacific</h3>
+                    </div>
+                    <div class="capability-image">
+                        <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&h=800&fit=crop" alt="Asia-Pacific">
+                        <div class="capability-image-overlay"></div>
+                    </div>
+                    <div class="capability-content">
+                        <div class="capability-tags">
+                            <span class="capability-tag">Global Sourcing Hub</span>
+                            <span class="capability-tag">Inventory Surplus</span>
+                        </div>
+                        <p class="capability-description">Manufacturing powerhouse with air freight capabilities for fast-turn projects</p>
+                    </div>
+                </div>
+
+                <!-- Europe -->
+                <div class="capability-card fade-in stagger-5">
+                    <div class="capability-card-header">
+                        <div class="capability-region-badge">05</div>
+                        <h3 class="capability-title">Europe</h3>
+                    </div>
+                    <div class="capability-image">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&h=800&fit=crop" alt="Europe">
+                        <div class="capability-image-overlay"></div>
+                    </div>
+                    <div class="capability-content">
+                        <div class="capability-tags">
+                            <span class="capability-tag">Regulation-Led Markets</span>
+                            <span class="capability-tag">OEM Parts Hub</span>
+                        </div>
+                        <p class="capability-description">Compliance expertise with efficient corridors to African resale markets</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Partner Network Visualization -->
-    <section class="section">
-        <div class="container">
-            <div class="services-header fade-in" style="text-align: center; margin-bottom: var(--spacing-3xl);">
-                <h2 class="services-main-title">Global Partner Network</h2>
-                <div class="services-divider"></div>
-                <p class="services-subtitle">
-                    Connected ecosystem spanning continents
-                </p>
-            </div>
-
-            <!-- Network Stats -->
-            <div class="grid grid-4 fade-in" style="margin-bottom: var(--spacing-3xl);">
-                <div style="text-align: center; padding: var(--spacing-xl); background: rgba(15, 53, 88, 0.4); backdrop-filter: blur(10px); border-radius: var(--radius-xl); border: 1px solid rgba(25, 192, 242, 0.2);">
-                    <div style="font-size: var(--text-5xl); font-weight: var(--font-weight-black); color: var(--color-cyan-accent); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">150+</div>
-                    <p style="font-size: var(--text-lg); color: var(--color-white); margin-top: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Active Partners</p>
-                </div>
-                
-                <div style="text-align: center; padding: var(--spacing-xl); background: rgba(15, 53, 88, 0.4); backdrop-filter: blur(10px); border-radius: var(--radius-xl); border: 1px solid rgba(25, 192, 242, 0.2);">
-                    <div style="font-size: var(--text-5xl); font-weight: var(--font-weight-black); color: var(--color-cyan-accent); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">50+</div>
-                    <p style="font-size: var(--text-lg); color: var(--color-white); margin-top: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Countries Covered</p>
-                </div>
-                
-                <div style="text-align: center; padding: var(--spacing-xl); background: rgba(15, 53, 88, 0.4); backdrop-filter: blur(10px); border-radius: var(--radius-xl); border: 1px solid rgba(25, 192, 242, 0.2);">
-                    <div style="font-size: var(--text-5xl); font-weight: var(--font-weight-black); color: var(--color-cyan-accent); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">24/7</div>
-                    <p style="font-size: var(--text-lg); color: var(--color-white); margin-top: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Global Coverage</p>
-                </div>
-                
-                <div style="text-align: center; padding: var(--spacing-xl); background: rgba(15, 53, 88, 0.4); backdrop-filter: blur(10px); border-radius: var(--radius-xl); border: 1px solid rgba(25, 192, 242, 0.2);">
-                    <div style="font-size: var(--text-5xl); font-weight: var(--font-weight-black); color: var(--color-cyan-accent); text-shadow: 0 0 30px rgba(25, 192, 242, 0.5);">5</div>
-                    <p style="font-size: var(--text-lg); color: var(--color-white); margin-top: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Regional Hubs</p>
-                </div>
-            </div>
-
-            <!-- Partner Types Grid -->
-            <div class="partner-types-grid fade-in">
-                <div class="partner-type-card">
-                    <div class="partner-type-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-                            <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/>
-                        </svg>
-                    </div>
-                    <h4 class="partner-type-title">Suppliers</h4>
-                    <p class="partner-type-description">Global vehicle and parts suppliers providing quality inventory</p>
-                </div>
-
-                <div class="partner-type-card">
-                    <div class="partner-type-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 8l-10 10M3 7h18M3 12h18M3 17h18"/>
-                            <circle cx="7" cy="12" r="1"/>
-                        </svg>
-                    </div>
-                    <h4 class="partner-type-title">Auction Platforms</h4>
-                    <p class="partner-type-description">Leading auction houses enabling competitive bidding</p>
-                </div>
-
-                <div class="partner-type-card">
-                    <div class="partner-type-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M10 3L8 21"/>
-                            <path d="M16 3L14 21"/>
-                            <path d="M3.5 9h17M2.5 15h17"/>
-                        </svg>
-                    </div>
-                    <h4 class="partner-type-title">Logistics Experts</h4>
-                    <p class="partner-type-description">End-to-end shipping and customs clearance partners</p>
-                </div>
-
-                <div class="partner-type-card">
-                    <div class="partner-type-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h4 class="partner-type-title">Compliance Providers</h4>
-                    <p class="partner-type-description">Regulatory and compliance specialists ensuring adherence</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join the Ecosystem CTA -->
-    <section class="section" style="background: linear-gradient(135deg, rgba(11, 42, 74, 0.95), rgba(25, 192, 242, 0.3)); position: relative; overflow: hidden;">
-        <!-- Background Pattern -->
-        <div style="position: absolute; inset: 0; opacity: 0.1; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);"></div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div class="fade-in" style="max-width: 1000px; margin: 0 auto; text-align: center;">
-                <h2 style="color: var(--color-white); margin-bottom: var(--spacing-lg); font-size: var(--text-5xl); font-weight: var(--font-weight-black);">
-                    Join the <span style="background: linear-gradient(135deg, var(--color-cyan-accent), #00d9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ecosystem</span>
-                </h2>
-                <div class="services-divider"></div>
-                <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--spacing-2xl); line-height: 1.8; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Whether you are a supplier, auction platform, logistics expert, or compliance provider, we invite you to scale globally through our tech-enabled ecosystem.
-                </p>
-                
-                <!-- Benefits Grid -->
-                <div class="grid grid-3" style="margin-bottom: var(--spacing-3xl); gap: var(--spacing-lg); text-align: left;">
-                    <div style="padding: var(--spacing-lg); background: rgba(15, 53, 88, 0.6); backdrop-filter: blur(10px); border-radius: var(--radius-lg); border: 1px solid rgba(25, 192, 242, 0.3);">
-                        <div style="font-size: var(--text-3xl); margin-bottom: var(--spacing-sm);">🌍</div>
-                        <h4 style="color: var(--color-cyan-accent); font-size: var(--text-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Global Reach</h4>
-                        <p style="color: rgba(255,255,255,0.85); font-size: var(--text-base); line-height: 1.6;">Access markets across 50+ countries with established infrastructure</p>
-                    </div>
-                    
-                    <div style="padding: var(--spacing-lg); background: rgba(15, 53, 88, 0.6); backdrop-filter: blur(10px); border-radius: var(--radius-lg); border: 1px solid rgba(25, 192, 242, 0.3);">
-                        <div style="font-size: var(--text-3xl); margin-bottom: var(--spacing-sm);">⚡</div>
-                        <h4 style="color: var(--color-cyan-accent); font-size: var(--text-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Tech Platform</h4>
-                        <p style="color: rgba(255,255,255,0.85); font-size: var(--text-base); line-height: 1.6;">Leverage cutting-edge technology for seamless operations</p>
-                    </div>
-                    
-                    <div style="padding: var(--spacing-lg); background: rgba(15, 53, 88, 0.6); backdrop-filter: blur(10px); border-radius: var(--radius-lg); border: 1px solid rgba(25, 192, 242, 0.3);">
-                        <div style="font-size: var(--text-3xl); margin-bottom: var(--spacing-sm);">🤝</div>
-                        <h4 style="color: var(--color-cyan-accent); font-size: var(--text-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);">Trusted Network</h4>
-                        <p style="color: rgba(255,255,255,0.85); font-size: var(--text-base); line-height: 1.6;">Join a vetted ecosystem of compliance-led partners</p>
-                    </div>
-                </div>
-
-                <a href="contact.html" class="btn btn-primary btn-large" style="font-size: var(--text-xl); padding: var(--spacing-lg) var(--spacing-3xl);">Become a Partner</a>
-            </div>
-        </div>
-    </section>
+    </div><!-- End continuous-feature-group wrapper -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -450,10 +534,9 @@
             <div class="footer-content">
                 <!-- Company Info -->
                 <div>
-                    <div class="navbar-logo" style="margin-bottom: var(--spacing-md);">
-                        <span>⚡</span>
-                        <span>GLOBE XM</span>
-                    </div>
+                    <a href="index.html" class="navbar-logo" style="margin-bottom: var(--spacing-md); display: inline-block;">
+                        <img src="assets/images/GLOBEXM-LOGO.png" alt="Globe XM Logo">
+                    </a>
                     <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-md);">
                         Removing borders from cross-border trading.
                     </p>

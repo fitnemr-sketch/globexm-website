@@ -96,13 +96,22 @@
         <div class="hero-decoration"></div>
     </section>
 
+    <!-- Unified Feature Sections Wrapper -->
+    <div class="continuous-feature-group">
+        <!-- Blurred Glow Background Circles -->
+        <div class="bg-glow bg-glow-cyan" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-blue" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-cyan small slow" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-blue medium alt" aria-hidden="true"></div>
     <!-- What We Do Section - Stacked Scrolling Cards -->
-    <section class="section what-we-do-scroll-section" style="padding: var(--spacing-3xl) 0;">
+    <section class="section what-we-do-scroll-section unified-feature-section" style="padding: var(--spacing-4xl) 0;">
         <div class="container">
-            <h2 class="text-center mb-4 fade-in" style="color: var(--color-white); font-size: var(--text-4xl); margin-bottom: var(--spacing-sm);">What We Do</h2>
-            <p class="text-center text-large mb-4 fade-in" style="max-width: 700px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.7); margin-bottom: var(--spacing-2xl); font-size: var(--text-lg);">
-                Globe XM is a technology-enabled platform that powers seamless global automotive and spare parts trading through innovation, compliance, and local expertise.
-            </p>
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">What We Do</h2>
+                <p class="unified-section-subtitle">
+                    Globe XM is a technology-enabled platform that powers seamless global automotive and spare parts trading through innovation, compliance, and local expertise.
+                </p>
+            </div>
             
             <div class="stacked-cards-container" id="stackedCardsContainer">
                 <!-- Stacked Card 1 -->
@@ -139,19 +148,19 @@
     </section>
 
     <!-- Where We Operate Section - Interactive Map with Hover Cards -->
-    <section class="section world-map-interactive-section" style="padding: var(--spacing-3xl) 0;">
+    <section class="section world-map-interactive-section unified-feature-section" style="padding: var(--spacing-4xl) 0;">
         <div class="container">
-            <h2 class="text-center mb-4 fade-in" style="color: var(--color-white); font-size: var(--text-4xl); margin-bottom: var(--spacing-sm);">Where We Operate</h2>
-            <p class="text-center text-large mb-4 fade-in" style="max-width: 650px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.7); margin-bottom: var(--spacing-xl); font-size: var(--text-lg);">
-                Building bridges across continents with local expertise and global reach
-            </p>
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Where We Operate</h2>
+                <p class="unified-section-subtitle">Building bridges across continents with local expertise and global reach</p>
+            </div>
             
             <!-- Interactive World Map with Location Pins -->
             <div class="interactive-map-container fade-in" style="max-width: 1000px; margin: 0 auto;">
                 <img src="assets/images/Where-We-Operate.png" alt="World Map" class="interactive-map-image" />
                 
-                <!-- Location Pin 1: North America & Europe -->
-                <div class="map-location-pin" style="top: 28%; left: 23%;" data-region="north-america">
+                <!-- Location Pin 1: Americas -->
+                <div class="map-location-pin" style="top: 35%; left: 20%;" data-region="americas">
                     <div class="pin-marker">
                         <svg width="32" height="40" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.56 8.5 15.5 8.5 15.5s8.5-8.94 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
@@ -159,14 +168,29 @@
                     </div>
                     <div class="pin-popup-card">
                         <div class="popup-card-image">
-                            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop" alt="North America & Europe" />
-                            <h4 class="popup-card-overlay-title">North America and Europe</h4>
+                            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop" alt="Americas" />
+                            <h4 class="popup-card-overlay-title">Americas</h4>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Location Pin 2: Middle East -->
-                <div class="map-location-pin" style="top: 33%; left: 52%;" data-region="middle-east">
+                <!-- Location Pin 2: Europe -->
+                <div class="map-location-pin" style="top: 34%; left: 50%;" data-region="europe">
+                    <div class="pin-marker">
+                        <svg width="32" height="40" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.56 8.5 15.5 8.5 15.5s8.5-8.94 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                        </svg>
+                    </div>
+                    <div class="pin-popup-card">
+                        <div class="popup-card-image">
+                            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=600&fit=crop" alt="Europe" />
+                            <h4 class="popup-card-overlay-title">Europe</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location Pin 3: Middle East -->
+                <div class="map-location-pin" style="top: 50%; left: 60%;" data-region="middle-east">
                     <div class="pin-marker">
                         <svg width="32" height="40" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.56 8.5 15.5 8.5 15.5s8.5-8.94 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
@@ -180,8 +204,8 @@
                     </div>
                 </div>
                 
-                <!-- Location Pin 3: Africa -->
-                <div class="map-location-pin" style="top: 52%; left: 45%;" data-region="africa">
+                <!-- Location Pin 4: Africa -->
+                <div class="map-location-pin" style="top: 55%; left: 53%;" data-region="africa">
                     <div class="pin-marker">
                         <svg width="32" height="40" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.56 8.5 15.5 8.5 15.5s8.5-8.94 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
@@ -195,8 +219,8 @@
                     </div>
                 </div>
                 
-                <!-- Location Pin 4: Asia-Pacific -->
-                <div class="map-location-pin" style="top: 35%; left: 75%;" data-region="asia-pacific">
+                <!-- Location Pin 5: Asia-Pacific -->
+                <div class="map-location-pin" style="top: 35%; left: 70%;" data-region="asia-pacific">
                     <div class="pin-marker">
                         <svg width="32" height="40" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.56 8.5 15.5 8.5 15.5s8.5-8.94 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
@@ -213,15 +237,61 @@
         </div>
     </section>
 
-    <!-- Services Overview Section - Premium Simple Cards -->
-    <section class="section services-premium-section">
+    <!-- Compliance & Governance Section - Infinite Scrolling Logos -->
+    <section class="section compliance-governance-section unified-feature-section" style="padding: var(--spacing-4xl) 0;">
         <div class="container">
-            <div class="services-header fade-in">
-                <h2 class="services-main-title">Our Services</h2>
-                <div class="services-divider"></div>
-                <p class="services-subtitle">
-                    Comprehensive solutions for seamless global automotive and spare parts trading
-                </p>
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Compliance & Governance</h2>
+                <p class="unified-section-subtitle">Trusted standards and regulatory frameworks ensuring security and transparency</p>
+            </div>
+            
+            <!-- Infinite Scrolling Logo Strip -->
+            <div class="compliance-scroll-wrapper">
+                <div class="compliance-scroll-track">
+                    <!-- First set of logos -->
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/GDPR.png" alt="GDPR" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/NDPR.png" alt="NDPR" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/DIFC.png" alt="DIFC" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/AML-KYC.png" alt="AML/KYC" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/ESG.png" alt="ESG" />
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/GDPR.png" alt="GDPR" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/NDPR.png" alt="NDPR" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/DIFC.png" alt="DIFC" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/AML-KYC.png" alt="AML/KYC" />
+                    </div>
+                    <div class="compliance-logo-item">
+                        <img src="assets/images/ESG.png" alt="ESG" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section - Premium Simple Cards -->
+    <section class="section services-premium-section unified-feature-section" style="padding: var(--spacing-4xl) 0;">
+        <div class="container">
+            <div class="feature-section-header fade-in">
+                <h2 class="unified-section-title">Our Services</h2>
+                <p class="unified-section-subtitle">Comprehensive solutions for seamless global automotive and spare parts trading</p>
             </div>
             
             <div class="services-premium-grid">
@@ -299,9 +369,14 @@
     </section>
 
     <!-- Stats Section - Gradient Background -->
-    <section class="section" style="background: linear-gradient(135deg, rgba(11, 42, 74, 0.95), rgba(25, 192, 242, 0.3)); position: relative; overflow: hidden;">
+    <section class="section stats-section" style="background: linear-gradient(135deg, rgba(11, 42, 74, 0.95), rgba(25, 192, 242, 0.3)); position: relative; overflow: hidden;">
         <!-- Background Pattern -->
         <div style="position: absolute; inset: 0; opacity: 0.1; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);"></div>
+        <!-- Animated Circle Highlights -->
+        <div class="circle-highlight" style="top: -60px; left: -80px;"></div>
+        <div class="circle-highlight blue delay-1" style="bottom: -80px; right: -120px;"></div>
+        <div class="circle-highlight small delay-2" style="top: 20%; right: 15%;"></div>
+        <div class="circle-highlight small blue delay-3" style="bottom: 10%; left: 20%;"></div>
         
         <div class="container" style="position: relative; z-index: 2;">
             <div class="grid grid-4">
@@ -329,14 +404,11 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section testimonials-section" style="padding: var(--spacing-4xl) 0; overflow: hidden; position: relative; background: linear-gradient(135deg, rgba(6, 24, 41, 0.98) 0%, rgba(11, 42, 74, 0.95) 50%, rgba(6, 24, 41, 0.98) 100%);">
+    <section class="section testimonials-section unified-feature-section" style="padding: var(--spacing-4xl) 0; overflow: hidden; position: relative;">
         <div class="container" style="position: relative; z-index: 2;">
-            <div class="services-header fade-in" style="margin-bottom: var(--spacing-3xl);">
-                <h2 class="services-main-title">Testimonials from Clients</h2>
-                <div class="services-divider"></div>
-                <p class="services-subtitle">
-                    Hear what our clients say about their experience with Globe XM
-                </p>
+            <div class="feature-section-header fade-in" style="margin-bottom: var(--spacing-3xl);">
+                <h2 class="unified-section-title">Testimonials from Clients</h2>
+                <p class="unified-section-subtitle">Hear what our clients say about their experience with Globe XM</p>
             </div>
         </div>
         
@@ -345,237 +417,276 @@
             <div class="testimonials-scroll-track">
                 <!-- First set of testimonials -->
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Michael Chen">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Michael Chen</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Globe XM transformed our international trading. The platform is intuitive and their support team is exceptional."</p>
-                        <p class="testimonial-name">Michael Chen</p>
-                        <p class="testimonial-role">CEO, AutoParts Global</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah Johnson">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Sarah Johnson</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Outstanding service! Globe XM made cross-border vehicle trading seamless. Highly recommend to any dealer."</p>
-                        <p class="testimonial-name">Sarah Johnson</p>
-                        <p class="testimonial-role">Director, Premium Motors</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Ahmed Al-Rashid">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Ahmed Al-Rashid">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Ahmed Al-Rashid</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"The auction access feature is game-changing. We've expanded our inventory reach significantly through Globe XM."</p>
-                        <p class="testimonial-name">Ahmed Al-Rashid</p>
-                        <p class="testimonial-role">Managing Partner, Gulf Auto Trading</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop" alt="Elena Rodriguez">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop" alt="Elena Rodriguez">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Elena Rodriguez</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Professional, reliable, and efficient. Globe XM has become our go-to platform for international parts sourcing."</p>
-                        <p class="testimonial-name">Elena Rodriguez</p>
-                        <p class="testimonial-role">Procurement Manager, EuroSpares Ltd</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop" alt="David Kim">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop" alt="David Kim">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">David Kim</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"The compliance and documentation support saved us countless hours. Globe XM truly understands the industry."</p>
-                        <p class="testimonial-name">David Kim</p>
-                        <p class="testimonial-role">Operations Director, Asia Motors</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Lisa Thompson">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Lisa Thompson">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Lisa Thompson</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Excellent platform with transparent pricing and reliable logistics. Our business has grown 40% since joining."</p>
-                        <p class="testimonial-name">Lisa Thompson</p>
-                        <p class="testimonial-role">Owner, Thompson Auto Group</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="James Wilson">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="James Wilson">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">James Wilson</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Fast, secure, and innovative. Globe XM's escrow service gives us complete peace of mind on every transaction."</p>
-                        <p class="testimonial-name">James Wilson</p>
-                        <p class="testimonial-role">Finance Director, Wilson Imports</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Maria Santos">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Maria Santos">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Maria Santos</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"A true partner in growth. The platform's analytics help us make smarter purchasing decisions every day."</p>
-                        <p class="testimonial-name">Maria Santos</p>
-                        <p class="testimonial-role">VP of Sales, Santos Auto Distributors</p>
                     </div>
                 </div>
 
                 <!-- Duplicate set for seamless loop -->
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Michael Chen">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Michael Chen</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Globe XM transformed our international trading. The platform is intuitive and their support team is exceptional."</p>
-                        <p class="testimonial-name">Michael Chen</p>
-                        <p class="testimonial-role">CEO, AutoParts Global</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah Johnson">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Sarah Johnson</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Outstanding service! Globe XM made cross-border vehicle trading seamless. Highly recommend to any dealer."</p>
-                        <p class="testimonial-name">Sarah Johnson</p>
-                        <p class="testimonial-role">Director, Premium Motors</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Ahmed Al-Rashid">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Ahmed Al-Rashid">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Ahmed Al-Rashid</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"The auction access feature is game-changing. We've expanded our inventory reach significantly through Globe XM."</p>
-                        <p class="testimonial-name">Ahmed Al-Rashid</p>
-                        <p class="testimonial-role">Managing Partner, Gulf Auto Trading</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop" alt="Elena Rodriguez">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop" alt="Elena Rodriguez">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">Elena Rodriguez</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"Professional, reliable, and efficient. Globe XM has become our go-to platform for international parts sourcing."</p>
-                        <p class="testimonial-name">Elena Rodriguez</p>
-                        <p class="testimonial-role">Procurement Manager, EuroSpares Ltd</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop" alt="David Kim">
-                    </div>
                     <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop" alt="David Kim">
+                            </div>
+                            <div class="testimonial-meta">
+                                <p class="testimonial-name">David Kim</p>
+                                <div class="testimonial-stars">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </div>
+                            </div>
                         </div>
                         <p class="testimonial-text">"The compliance and documentation support saved us countless hours. Globe XM truly understands the industry."</p>
-                        <p class="testimonial-name">David Kim</p>
-                        <p class="testimonial-role">Operations Director, Asia Motors</p>
                     </div>
                 </div>
 
@@ -635,6 +746,7 @@
             </div>
         </div>
     </section>
+    </div><!-- End continuous-feature-group wrapper -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -642,10 +754,9 @@
             <div class="footer-content">
                 <!-- Company Info -->
                 <div>
-                    <div class="navbar-logo" style="margin-bottom: var(--spacing-md);">
-                        <span>⚡</span>
-                        <span>GLOBE XM</span>
-                    </div>
+                    <a href="index.html" class="navbar-logo" style="margin-bottom: var(--spacing-md); display: inline-block;">
+                        <img src="assets/images/GLOBEXM-LOGO.png" alt="Globe XM Logo">
+                    </a>
                     <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--spacing-md);">
                         Removing borders from cross-border trading.
                     </p>
